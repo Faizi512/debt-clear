@@ -27,15 +27,15 @@ class Home extends Common {
     });
 
     $("#submit-btn").click(function(){
-      $('#msform').parsley().whenValidate({
-        group: 'block-4'
-      }).done(() =>{
-        $("#submit-btn").prop('disabled', 'disabled')
-      })
+      // $('#msform').parsley().whenValidate({
+      //   group: 'block-5'
+      // }).done(() =>{
+      //   $("#submit-btn").prop('disabled', 'disabled')
+      // })
+      CI.postData()
     })
 
     $(".next").click(function(){
-      debugger
       var _this = this
       $('#msform').parsley().whenValidate({
         group: 'block-' + CI.currentTab
@@ -49,7 +49,6 @@ class Home extends Common {
 
         CI.current_fs = $('.'+current_field)
         CI.next_fs = $('.'+next_field);
-        
         if (CI.currentTab == 6) {
           if ($(".page").val() == 'sms') {
             $(".loader-div").removeClass("d-none")
