@@ -26,6 +26,10 @@
               <%= image_tag('tick.png', class: 'img-check me-2')%>
               <p class="mb-0 w-auto text-white text-start">Take away your money worries</p>
             </li>
+            <li class="d-flex align-items-start justify-content-start mb-2">
+            <%= image_tag('tick.png', class: 'img-check me-2')%>
+            <p class="mb-0 w-auto text-white text-start">Disclaimer</p>
+          </li>
           </ul>
           <a href="#debt-main" class="d-none d-md-block">
             <button type="button" class="btn btn-blue px-lg-5 px-4 rounded-pill text-white font-montserat my-4">Check If You Qualify <%= image_tag('hand-point.png', class: 'img-hand ms-2')%></button>
@@ -343,7 +347,7 @@
                       </li>
                     </ul>
                   </div>
-                  <% if params[:action] == "sms" %>
+                  <% if params[:action] == "sms2" %>
                     <input type="hidden" name="page" class="page" value="sms">
                     <% if  params[:email].nil? || params[:email] == '' || params[:email] == '[email]' %>
                       <div class="form-group col-lg-8 col-12  mb-3 email-div mx-auto">
@@ -517,12 +521,30 @@
                     <div class="error-checkbox"></div>
                     <%= render 'layouts/accept_terms'%>
                   </div>
-                  <input type="button" name="previous" class="previous action-button-previous" value="Previous" data-previous="residential-status-field" data-current="contact-detail-field"/>
-                  <input id="submit-btn" type="button" name="next" class="next action-button" value="Write Off My Debt" data-current="contact-detail-field"/>
+                  <input type="button" name="previous" class="previous action-button-previous" value="Previous" data-previous="employment-status-field" data-current="contact-status-field"/>
+                  <input type="button"
+                    data-parsley-group="block-2"
+                    name="next"
+                    class="next action-button"
+                    value="Next"
+                    data-current="contact-status-field"
+                    data-next="last-detail-field"/>
                   <div class="loader-div d-none">
                     <%= image_tag('loader.gif', class: 'loader-img')%>
                   </div>
                 </fieldset>
+                <!--Last Detail field -->
+                <fieldset class="last-detail-field">
+                <div class="text-center">
+                  <h5 class="d-flex justify-content-start py-2 text-orng"><i class="fa-solid fa-circle-check text-green me-2"></i>We are not lending solutions and lending brokers</h5>
+                  <p>We Specialise in helping people with credit relief options, credit counselling and money mangement solutions.  </p>    
+                  <p>To Proceed with reducing your debt please click continue below. </p>
+                </div>
+                <input id="submit-btn" type="button" name="next" class="next action-button" value="Continue" data-current="last-detail-field"/>
+                <div class="loader-div d-none">
+                  <%= image_tag('loader.gif', class: 'loader-img')%>
+                </div>
+              </fieldset>
               </form>
             </div>
           </div>
