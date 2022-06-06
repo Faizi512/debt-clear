@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/start', to: 'pages#start'
   get '/new', to: 'pages#new'
   get '/sms', to: 'pages#sms'
+  get '/sms2', to: 'pages#sms2'
   get '/success', to: 'pages#success'
   get '/cookies', to: 'pages#cookies'
   get '/home-cookies', to: 'pages#home_cookie_policy'
