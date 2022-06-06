@@ -35,6 +35,7 @@ class Home extends Common {
     })
 
     $(".next").click(function(){
+      debugger
       var _this = this
       $('#msform').parsley().whenValidate({
         group: 'block-' + CI.currentTab
