@@ -49,7 +49,7 @@ class Home extends Common {
         CI.current_fs = $('.'+current_field)
         CI.next_fs = $('.'+next_field);
         
-        if (CI.currentTab == 5) {
+        if (CI.currentTab == 6) {
           if ($(".page").val() == 'sms') {
             $(".loader-div").removeClass("d-none")
             CI.postData()
