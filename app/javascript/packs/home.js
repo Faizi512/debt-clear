@@ -67,6 +67,10 @@ class Home extends Common {
           return true
         }
         else{
+          if(CI.currentTab == 5){
+            document.getElementsByClassName("contact-detail-field")[0].style.display = "none"
+            document.getElementsByClassName("text-center text-orng")[0].style.display = "none"
+          }
           //activate next step on progressbar using the index of this.next_fs
           CI.fixStepIndicator(CI.currentTab)
           //show the next fieldset
