@@ -29,5 +29,7 @@ class PagesController < ApplicationController
 	def home_privacy_policy
 	end
 
+	def loan_decline
+	end
 
 end

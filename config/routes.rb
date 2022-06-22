@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get '/home-privacy', to: 'pages#home_privacy_policy'
   get '/privacy-policy', to: 'pages#privacy_policy'
   get '/terms-and-conditions', to: 'pages#terms_and_conditions'
+  get '/loan-decline', to: 'pages#loan_decline'
 end
